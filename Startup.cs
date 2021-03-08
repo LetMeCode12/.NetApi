@@ -29,7 +29,7 @@ namespace myApi
         public void ConfigureServices(IServiceCollection services)
         {
 
-            services.AddDbContext<UserRepository>(opt => opt.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<_DbContext>(opt => opt.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Latest);
             services.AddControllers();
             services.AddSwaggerGen(c =>

@@ -38,3 +38,4 @@ C:\Users\Norbert\Desktop\Projekty\C#\.Net\ApiV3\myApi\obj\Debug\net5.0\myApi.pdb
 C:\Users\Norbert\Desktop\Projekty\C#\.Net\ApiV3\myApi\obj\Debug\net5.0\myApi.genruntimeconfig.cache
 C:\Users\Norbert\Desktop\Projekty\C#\.Net\ApiV3\myApi\bin\Debug\net5.0\Humanizer.dll
 C:\Users\Norbert\Desktop\Projekty\C#\.Net\ApiV3\myApi\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\Norbert\Desktop\Projekty\C#\.Net\ApiV3\myApi\bin\Debug\net5.0\BCrypt.Net.dll

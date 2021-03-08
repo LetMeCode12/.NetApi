@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Repository;
 using Models;
+using Microsoft.EntityFrameworkCore;
+using Seciurity;
 
 namespace myApi.Controllers
 {
@@ -14,24 +16,29 @@ namespace myApi.Controllers
     public class UserController : ControllerBase
     {
 
-        private readonly UserRepository _context;
+        private readonly _DbContext _context;
 
-      public UserController(UserRepository context){
-          this._context= context;
-      }
+        public UserController(_DbContext context){
+            this._context= context;
+        }
 
         [HttpPost("/user/add")]
         public ActionResult<User> addUser(User user){
-
+            user.Login.Password= Hashing.HashPassword(user.Login.Password);
             _context.Users.Add(user);
             _context.SaveChanges();
             return user;
         }
 
         [HttpGet("/user/getAll")]
-        public ActionResult<List<User>> getAll(){
-
-            return _context.Users.ToList();
+        public ActionResult<List<Boolean>> getAll(){
+                        
+            return _context.Users.Include(e=>e.Login).ToList().Select(e=>Hashing.ValidatePassword("Hello",e.Login.Password)).ToList();
+        }
+        [HttpGet("/user/getLogins")]
+        public ActionResult<List<UserLogin>> getAllLogins(){
+                        
+            return _context.UserLogins.Include(e=>e.User).ToList();
         }
 
         [HttpGet("/user/ok")]

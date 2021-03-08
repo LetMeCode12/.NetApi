@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "t20tVCx+aSL6jOiEBty3O0zO7kdSMJ+UqqSgONviuQLTxJ2Gbfz4yYkSLli1iTYJgt71HwIodQmE0CdPRfuePw==",
+  "dgSpecHash": "+KGivHjZ8EulLp4AI71FRTxtvvosmoo8vxV7foGK3mrBFzg55VnJwxIFirWKrGZgXppWYFqP2H2oB9OghrHWig==",
   "success": true,
   "projectFilePath": "C:\\Users\\Norbert\\Desktop\\Projekty\\C#\\.Net\\ApiV3\\myApi\\myApi.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Norbert\\.nuget\\packages\\bcrypt.net\\0.1.0\\bcrypt.net.0.1.0.nupkg.sha512",
     "C:\\Users\\Norbert\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Norbert\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Norbert\\.nuget\\packages\\microsoft.entityframeworkcore\\5.0.3\\microsoft.entityframeworkcore.5.0.3.nupkg.sha512",
@@ -107,5 +108,16 @@
     "C:\\Users\\Norbert\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\Norbert\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Pakiet „BCrypt.Net 0.1.0” został przywrócony przy użyciu elementu „.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8” zamiast platformy docelowej projektu „net5.0”. Ten pakiet może nie być w pełni kompatybilny z Twoim projektem.",
+      "libraryId": "BCrypt.Net",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    }
+  ]
 }
