@@ -1,6 +1,8 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json.Serialization;
+using Microsoft.EntityFrameworkCore;
+using Models;
 
 namespace Models{
 
@@ -15,6 +17,12 @@ namespace Models{
         // [JsonIgnore]
         public UserLogin Login {get; set;}
 
+    }
+
+    public class UserDbContext : DbContext
+    {
+        public UserDbContext(DbContextOptions<UserDbContext> options) : base(options) { }
+        public DbSet<User> User { get; set; }
     }
 
 }
